@@ -42,7 +42,9 @@ export const StatsItem = styled.li`
   flex-direction: column;
   width: calc(280px / 3);
   text-align: center;
-  background-color: rgb(164, 161, 161);
+  background-color: ${function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }};
   padding-top: 20px;
   padding-bottom: 20px;
   border: solid 0.5px gray;

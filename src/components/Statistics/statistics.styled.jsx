@@ -24,10 +24,13 @@ export const StatItem = styled.li`
   width: calc(100% / 5);
   display: flex;
   flex-direction: column;
-  background-color: rgb(164, 161, 161);
+  /* background-color: rgb(164, 161, 161); */
   border: solid 0.5px gray;
   padding-top: 8px;
   padding-bottom: 8px;
+  background-color: ${function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }};
 `;
 export const Label = styled.span`
   color: #fff;

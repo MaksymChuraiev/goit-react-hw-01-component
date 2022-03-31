@@ -16,14 +16,7 @@ export const Status = styled.span`
   height: 15px;
   border-radius: 50%;
   background-color: ${({ isOnline }) => {
-    switch (isOnline) {
-      case 'true':
-        return '#4caf50';
-      case 'false':
-        return '#f44336';
-      default:
-        return '#000';
-    }
+    return isOnline ? '#4caf50' : '#f44336';
   }};
 `;
 export const Avatar = styled.img`
